@@ -23,3 +23,18 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+
+name: SonarCloud Main Workflow
+jobs:
+  sonarcloud:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        # Disabling shallow clone is recommended for improving relevancy of reporting
+        fetch-depth: 0
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${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}
+        SONAR_TOKEN: ${74111231b1062e50bb7b951760244f83f599a0de}
