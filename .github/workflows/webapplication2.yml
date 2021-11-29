@@ -34,8 +34,6 @@ jobs:
           -Dsonar.organization=jesz1988
           -Dsonar.projectKey=gitactionsscan
           
-    - name: SonarCloud Scan
-      uses: sonarsource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${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}
         SONAR_TOKEN: ${74111231b1062e50bb7b951760244f83f599a0de}
